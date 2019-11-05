@@ -1,0 +1,10 @@
+# Version:1.0 MMMC View Definition File
+# Do Not Remove Above Line
+create_library_set -name fast_set -timing {/techfiles_ldap/umc_ksmi_lab/lib/cells_best.lib} -si {/techfiles_ldap/umc_ksmi_lab/cdB/cells_best.cdB}
+create_library_set -name slow_set -timing {/techfiles_ldap/umc_ksmi_lab/lib/cells_worst.lib} -si {/techfiles_ldap/umc_ksmi_lab/cdB/cells_worst.cdB}
+create_constraint_mode -name normal_work -sdc_files {../lab2/out/cw_1_umc.sdc}
+create_delay_corner -name corner_fast -library_set {fast_set}
+create_delay_corner -name corner_slow -library_set {slow_set}
+create_analysis_view -name setup_time_view -constraint_mode {normal_work} -delay_corner {corner_slow}
+create_analysis_view -name hold_time_work -constraint_mode {normal_work} -delay_corner {corner_fast}
+set_analysis_view -setup {setup_time_view} -hold {hold_time_work}
