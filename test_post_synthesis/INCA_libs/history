@@ -1,6 +1,0 @@
-//
-// File created by:  irun
-// Do not modify this file
-
-s1::(23Oct2019:17:58:18):( irun /home2/s_jolencki/projASIC/test_post_synthesis/src/keccak_test.v /home2/s_jolencki/projASIC/test_post_synthesis/src/keccak_umc.v /home2/s_jolencki/projASIC/test_post_synthesis/src/cells_typical_corrected.v -s +gui +linedebug +access+rwc -q /home2/s_jolencki/projASIC/test_post_synthesis/src/cells_typical_corrected.v /home2/s_jolencki/projASIC/test_post_synthesis/src/keccak_test.v /home2/s_jolencki/projASIC/test_post_synthesis/src/keccak_umc.v )
-s2::(05Nov2019:20:50:42):( irun /home2/s_jolencki/projASIC/test_post_synthesis/src/keccak_test.v /home2/s_jolencki/projASIC/test_post_synthesis/src/keccak_umc.v /home2/s_jolencki/projASIC/test_post_synthesis/src/cells_typical_corrected.v -s +gui +linedebug +access+rwc -q /home2/s_jolencki/projASIC/test_post_synthesis/src/cells_typical_corrected.v /home2/s_jolencki/projASIC/test_post_synthesis/src/keccak_test.v /home2/s_jolencki/projASIC/test_post_synthesis/src/keccak_umc.v -input irun_sim.key )
