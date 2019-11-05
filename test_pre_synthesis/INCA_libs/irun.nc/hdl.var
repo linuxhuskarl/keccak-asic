@@ -1,0 +1,7 @@
+define NCSIMRC	( /eda/cadence/2017-18/RHELx86/INCISIVE_15.20.038/tools/inca/files/ncsimrc, ~/.ncsimrc )
+include ./hdlrun.var
+define SNAPSHOT worklib.keccak_test:v
+DEFINE RUNMODEDEFAULT 1
+DEFINE LIB_MAP ( + => worklib )
+define ELAB_SNAPSHOT
+define SNAPSHOT worklib.keccak_test:v

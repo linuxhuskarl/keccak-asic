@@ -1,0 +1,29 @@
+//
+// File created by:  irun
+// Do not modify this file
+//
++gui
++linedebug
++access+rwc
+-TCL
+-gui
+-INPUT
+irun_sim.key
++EMGRLOG
+irun.log
+-XLSTIME
+1572983228
+-XLKEEP
+-XLMODE
+./INCA_libs/irun.lnx8664.15.20.nc
+-RUNMODE
+-CDSLIB
+./INCA_libs/irun.lnx8664.15.20.nc/cds.lib
+-HDLVAR
+./INCA_libs/irun.lnx8664.15.20.nc/hdl.var
+-XLNAME
+irun
+-XLVERSION
+"TOOL:	irun(64)	15.20-s038"
+-XLNAME
+./INCA_libs/irun.lnx8664.15.20.nc/cadence2_169798
