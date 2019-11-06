@@ -10,7 +10,7 @@ module keccak_test;
     wire [511:0] out;
     wire out_ready;
 
-    localparam CLK_PER = 10;
+    localparam CLK_PER = 4;
 
     keccak sha3core(clk, reset, in, in_ready, is_last, byte_num, buffer_full, out, out_ready);
 
@@ -76,9 +76,9 @@ module keccak_test;
         #0 is_last = 0;
         #0 in_ready = 0;
         #0 byte_num = 0;
-
-        @(posedge clk && out_ready)
-        #0; #0;
+        
+        wait(out_ready);
+        @(posedge clk)
         if(out != correct_hash) begin
             $display("%d# ERROR! hash incorrect - (correct != out) 512'h%h != 512'h%h", $time, correct_hash, out);
         end
