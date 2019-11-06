@@ -77,8 +77,8 @@ module keccak_test;
         #0 in_ready = 0;
         #0 byte_num = 0;
 
-        @(posedge clk && out_ready)
-        #0; #0;
+        wait(out_ready);
+        @(posedge clk)
         if(out != correct_hash) begin
             $display("%d# ERROR! hash incorrect - (correct != out) 512'h%h != 512'h%h", $time, correct_hash, out);
         end
