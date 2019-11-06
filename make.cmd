@@ -13,12 +13,12 @@ set_output_delay -clock CLK -max 0.1 [get_ports {buffer_full out out_ready}]
 set_output_delay -clock CLK -min 0.05 [get_ports {buffer_full out out_ready}]
 set_input_delay -clock CLK -max 0.1 [get_ports {reset in in_ready is_last byte_num}]
 set_input_delay -clock CLK -min 0.05 [get_ports {reset in in_ready is_last byte_num}]
+set_data_check -setup 0.1 -from [get_ports {out_ready}] -to [get_ports {out[0]}]
+set_data_check -hold 0.1 -from [get_ports {out_ready}] -to [get_ports {out[0]}]
 set_db syn_generic_effort low
 set_db syn_map_effort low
 syn_generic
 syn_map
-# report timing
-# report area
 report timing > ./rpt/timing_umc.rpt
 report area > ./rpt/area_umc.rpt
 write_hdl > ./out/keccak_umc.v

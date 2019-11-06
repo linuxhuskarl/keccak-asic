@@ -1,6 +1,6 @@
 # ####################################################################
 
-#  Created by Genus(TM) Synthesis Solution 17.11-s014_1 on Wed Oct 23 15:26:54 CEST 2019
+#  Created by Genus(TM) Synthesis Solution 17.11-s014_1 on Wed Nov 06 12:12:17 CET 2019
 
 # ####################################################################
 
@@ -1182,5 +1182,7 @@ set_input_delay -clock [get_clocks CLK] -add_delay -min 0.05 [get_ports is_last]
 set_input_delay -clock [get_clocks CLK] -add_delay -min 0.05 [get_ports {byte_num[2]}]
 set_input_delay -clock [get_clocks CLK] -add_delay -min 0.05 [get_ports {byte_num[1]}]
 set_input_delay -clock [get_clocks CLK] -add_delay -min 0.05 [get_ports {byte_num[0]}]
+set_data_check -from [get_ports out_ready] -to [get_ports {out[0]}] -setup 0.1  
+set_data_check -from [get_ports out_ready] -to [get_ports {out[0]}] -setup 0.1  
 set_clock_uncertainty -setup 0.005 [get_clocks CLK]
 set_clock_uncertainty -hold 0.005 [get_clocks CLK]
